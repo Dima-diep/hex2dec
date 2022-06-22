@@ -7,17 +7,17 @@ int hex2dec(const string hexnum) {
     static int decout = 0;
     const int hexconst = hexnum.length() - 1;
     for (unsigned int k=0; k < hexnum.length(); k++) {
-        if (hexnum[k]=='A') {
+        if (hexnum[k]=='A' || hexnum[k] == 'a') {
             decout += (10 * pow(16, (hexconst - k)));
-        } else if (hexnum[k]=='B') {
+        } else if (hexnum[k]=='B' || hexnum[k] == 'b') {
             decout += (11 * pow(16, (hexconst - k)));
-        } else if (hexnum[k]=='C') {
+        } else if (hexnum[k]=='C' || hexnum[k] == 'c') {
             decout += (12 * pow(16, (hexconst - k)));
-        } else if (hexnum[k]=='D') {
+        } else if (hexnum[k]=='D' || hexnum[k] == 'd') {
             decout += (13 * pow(16, (hexconst - k)));
-        } else if (hexnum[k]=='E') {
+        } else if (hexnum[k]=='E' || hexnum[k] == 'e') {
             decout += (14 * pow(16, (hexconst - k)));
-        } else if (hexnum[k]=='F') {
+        } else if (hexnum[k]=='F' || hexnum[k] == 'f') {
             decout += (15 * pow(16, (hexconst - k)));
         } else {
             char sym = hexnum[k];
